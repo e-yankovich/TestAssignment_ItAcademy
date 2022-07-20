@@ -1,0 +1,77 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    margin: 0;
+    text-align: center;
+    color:rgb(83, 83, 243)
+}
+h2{
+    margin: 0;
+    text-align: center;
+}
+h3{
+    padding-left: 17px;
+}
+#header {background-color: rgb(174, 208, 255);}
+#main{
+    background-color: rgb(245, 255, 108);
+}
+#menu {
+    background-color: rgb(245, 255, 108);
+    float: left;
+    width: 300px;
+    }
+#content {
+    margin-left: 300px;
+    background-color: white;
+}
+#background{
+    background: url(ball.png) repeat-y;
+    background-size: 10%;
+    background-position-x: right;
+}
+#footer {
+    background-color: rgb(174, 208, 255);
+}
+#clear{
+    clear: both;
+}
+#div1{
+    margin: 20px 20px 0px 20px;
+}
+#p1{
+    margin-block-start:0;
+}
+#p2{
+    margin-block-end:0;
+}
+#img{
+    float:left;
+    margin: 0px 15px 15px 0px;
+    width: 30%;
+    height: 30%;
+}
+@media screen and (max-device-width:768px) {
+    h1{
+        font-size:larger;
+    }
+    h2{
+        font-size:medium;
+    }
+    h3{
+        font-size:medium;
+    }
+    #menu{
+        width: 100%;
+    }
+    #content {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+    }
+    #img {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #submit
+    {
+    border-radius: 10px;
+    background-color: rgb(68, 68, 199);
+    color: white;
+    font-size: 30pt;
+    }
+</style>
+<body>
+    <button type="submit" id="submit">Input text</button>
+    <script>
+        function compare(a, b) {
+            if (a.length > b.length) {
+                return -1;
+            }
+            if (a.length < b.length) {
+                return 1;
+            }
+            return 0;
+        }
+
+        document.querySelector("#submit").onclick = function()
+        {
+            let answer = prompt("Введите текст произвольной длины");
+            const signs = [',', '.', '!', '?', ':', ';', '"', "'",]
+            for (i = 0; i < signs.length; i++) {
+                answer = answer.replace(signs[i], '');
+            };
+            let answerArr = answer.split(' ');
+            let newArr = answerArr.sort(compare);
+            if (newArr.length < 3)
+            {
+                alert('Самые длинные слова: ' + newArr.join("; ") );
+            }
+            alert('Три самых длинных слова: ' + newArr.slice(0,3).join("; "));
+        }
+    </script>
+</body>
+</html>

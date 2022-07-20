@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const surname = prompt("Введите фамилию");
+        const name = prompt("Введите имя");
+        const patronymic = prompt("Введите отчество");
+        const age = prompt("Возраст в годах");
+        const is_male = confirm("Bаш пол - мужской?");
+
+        let answer = `        ФИО: ${surname} ${name} ${patronymic}
+        возраст, лет: ${age}
+        возраст, дней: ${age*365}
+        пол: ${is_male ? "мужской" : "женский"}
+        пенсионный возраст: ${(is_male && age >= 63) || (!is_male && age >= 58) ? "да" : "нет"}`;
+        
+        alert(answer);
+    </script>
+</body>
+</html>
